@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2e;
+    background-image: linear-gradient(to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    color: #dcdcdc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.outbox {
+    /*border-top: #dcdcdc 2px solid;
+    border-bottom: #dcdcdc 2px solid;*/
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    padding: 0% 5% 2% 5%;
+    position: relative;
+}
+
+/* .outbox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40%;
+    width: 2px;
+    background-color: #dcdcdc;
+} */
+
+.left,
+.right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.left h2 {
+    margin-left: 40px; /* Adjust this value to move the h2 element to the right */
+}
+
+.left {
+    margin-left: 20px;
+    width: 44%;
+}
+
+.right {
+    width: 56%;
+    margin-left: 10px;
+}
+
+.left-box,
+.right-box {
+    background-color: #d8d9de37;
+    align-self: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    width: 90%;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.reset-btn {
+    margin-top: 10px; /* Space between Run and Reset buttons */
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin: 3% 0% 2% 0%;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 5px 5px #939393;
+    letter-spacing: 3px;
+}
+h2 {
+    color: #ffffff;
+    text-align: center;
+    margin: 3% 0% 2% 0%;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 5px 5px #939393;
+    letter-spacing: 3px;
+}
+p {
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+}
+
+textarea {
+    width: 100%;
+    height: 270px;
+    background-color: #44475a58;
+    color: #f2f24a;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    resize: none;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.left-box textarea::placeholder, .right-box textarea::placeholder {
+    color: #f2f24a; /* Replace with your desired color */
+    opacity: 1; /* Ensures the color is not faded */
+}
+
+
+button {
+    background-color: #44475a;
+    color: #f8f8f2;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+button:hover {
+    background-color: #495477;
+}
+
+.edit-btn {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pen-btn,
+.download,
+.upload {
+    margin-left: 5px;
+    border: rgb(70, 70, 82) 1px solid;
+    padding: 4px;
+    background-color: #313443c3;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.download {
+    padding: 6px;
+    margin-left: 10px;
+}
+
+.upload {
+    padding: 6px;
+    rotate: 180deg;
+}
+
+.saver {
+    display: flex;
+    align-items: center;
+}
+
+.save-btn {
+    margin-left: 5px;
+    background-color: hsla(135, 59%, 33%, 0.75);
+}
+
+.save-btn:hover {
+    background-color: #1a6f2cd1;
+}
+
+.reset-btn {
+    margin-left: 5px;
+    align-items: center;
+    background-color: #bb0101;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+
+.reset-btn:hover {
+    background-color: #a50303;
+}
+
+.run-btn {
+    margin-left: 5px;
+    align-items: center;
+    background-color: #01bbac;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.run-btn:hover {
+    background-color: #02a597;
+}
+
+@media (max-width: 1000px) {
+    .outbox {
+        flex-direction: column;
+        width: 100vw;
+        margin: 0;
+    }
+
+    .input-btn,
+    .output-btn,
+    .intermediate-btn,
+    .symtab-btn,
+    .output-btn,
+    .output-btn2 {
+        margin-bottom: 3px;
+    }
+
+    .run-btn {
+        margin: 15px 0;
+    }
+
+    .left,
+    .right {
+        width: 80%;
+        margin-right: 5%;
+    }
+
+    .left-box,
+    .right-box {
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+}
